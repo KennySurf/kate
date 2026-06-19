@@ -20,10 +20,6 @@
     box-sizing: border-box;
 }
 
-.header *, .header *::before, .header *::after {
-    box-sizing: border-box;
-}
-
 .header .logo {
     display: block;
     width: 74px;
