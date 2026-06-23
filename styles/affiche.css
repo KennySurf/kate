@@ -101,41 +101,54 @@ body {
 
 /*Настройка стиля билета*/
 .ticket-content {
+    position: relative;
+
     width: calc((1067 / 1440) * 100vw);
+    max-width: 90vw;
 
-    background-color: black;
-
+    background-color: rgba(255, 255, 255, 0.5);
 
     border-radius: calc((20 / 1440) * 100vw);
-    padding: calc((30 / 1440) * 100vw);
-
 
     /*Эффект выползания билета снизу*/
     transform: translateY(50px);
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.ticket-header {
-    width: calc((900 / 1440) * 100vw);
-    height: calc((400 / 1440) * 100vw);
-    background: #e0e0e0;
-    border-radius: 20px;
-
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-    color: black;
+.ticket-img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .ticket-buy-button {
+    position: absolute;
+
+    bottom: calc((5 / 1440) * 100vw);
+    right: calc((85 / 1440) * 100vw);
+
+    /* Размеры из макета */
     width: calc((284 / 1440) * 100vw);
     height: calc((55 / 1440) * 100vw);
 
-    color: #e0e0e0;
+    /* Внешний вид */
+    color: #FFFFFF;
     background-color: #000000;
+    border: none; /* Убираем стандартную рамку кнопки браузера */
     border-radius: calc((9 / 1440) * 100vw);
+
+    /* Типографика */
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: calc((16 / 1440) * 100vw);
+    text-transform: uppercase; /* Делаем все буквы заглавными */
+
+    /* Интерактивность */
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.ticket-buy-button:hover {
+    opacity: 0.7; /* Легкое затухание при наведении */
 }
 
 .ticket-modal-overlay.active {
