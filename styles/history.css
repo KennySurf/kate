@@ -11,7 +11,7 @@ body {
 /*весь main контейнер*/
 .page-content {
     width: 100%;
-    padding-top: 147.75px;
+    padding-top: calc((147.75 / 1440) * 100vw);
     box-sizing: border-box;
 }
 
@@ -109,21 +109,17 @@ body {
 
 /*футер*/
 .page-footer {
-    padding: 100px 54px 50px 54px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-    margin-top: 50px;
+    margin: calc((123 / 1440) * 100vw) calc((30 / 1440) * 100vw) calc((41 / 1440) * 100vw) calc((20 / 1440) * 100vw);
 }
 
 .footer-center {
-    margin-bottom: 120px;
+    text-align: center;
+    margin-bottom: calc((120 / 1440) * 100vw);
 }
 
 .affiche-link {
     color: #ACACAC;
-    font-size: 16px;
+    font-size: calc((16 / 1440) * 100vw);
     line-height: 100%;
     text-decoration: underline;
     text-underline-offset: 4px;
@@ -139,7 +135,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    font-size: 16px;
+    font-size: calc((16 / 1440) * 100vw);
     line-height: 100%;
 }
 

@@ -1,0 +1,46 @@
+body {
+    background-color: #000000;
+    color: #FFFFFF;
+    margin: 0;
+    font-family: 'Helvetica', Arial, sans-serif;
+
+    overflow-x: hidden;
+}
+
+.page-content {
+    width: 100%;
+    padding: calc((75 / 1440) * 100vw) calc((30 / 1440) * 100vw) calc((100 / 1440) * 100vw);
+    box-sizing: border-box;
+}
+
+/*НАСТРОЙКА СЕТКИ*/
+.merch-grid {
+    display: grid;
+    grid-template-columns: repeat(2, calc((420) * 100vw));
+
+    column-gap: calc((66 /1440) * 100vw);
+    row-gap: calc((93 / 1440) * 100vw);
+
+    justify-content: start;
+
+    padding-bottom: calc((150 / 1440) * 100vw);
+}
+
+/*шахматный порядок со сдвигом*/
+.product-card:nth-child(even) {
+    transform: translateY(calc((150 / 1440) * 100vw));
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: calc((16 / 1440) * 100vw);
+    gap: calc((20 / 1440) * 100vw);
+}

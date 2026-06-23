@@ -1,0 +1,34 @@
+html {
+    font-size: calc(100vw / 1440);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #FFFFFF;
+    margin: 0;
+    font-family: 'Helvetica', Arial, sans-serif;
+
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+.page-content {
+    width: 100%;
+    padding: 75rem 30rem 100rem;
+}
+
+.merch-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 420rem);
+    column-gap: 66rem;
+    row-gap: 80rem;
+
+    justify-content: start;
+
+    padding-bottom: 150rem;
+}
