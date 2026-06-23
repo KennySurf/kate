@@ -8,10 +8,6 @@ html, body {
     overflow: hidden;
 }
 
-/*.header *, .header *::before, .header *::after {*/
-/*    box-sizing: border-box;*/
-/*}*/
-
 *, *::before, *::after {
     box-sizing: inherit;
 }
@@ -32,20 +28,12 @@ html, body {
     display: block;
     background-color: #F0F0F0;
     flex-shrink: 0;
-
-    /*max-height: 159px;*/
-    /*overflow: hidden;*/
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
-
 }
 
 .svg-title-img {
     width: 100%;
     height: auto;
     display: block;
-/*    tt*/
 }
 
 /*Секция 2*/
