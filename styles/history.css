@@ -18,9 +18,11 @@ body {
 /*общие настройки макета колонок*/
 .content-columns {
     display: flex;
-    justify-content: space-between;
-    /*padding: 0 54px;*/
     box-sizing: border-box;
+
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 /*левая колонка*/
@@ -29,6 +31,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    flex-shrink: 0;
 }
 
 .img-top {
@@ -39,7 +43,7 @@ body {
 
 .vertical-title-wrapper {
     margin-top: 36px;
-    margin-left: 46px;
+    margin-left: 54px;
 }
 
 .vertical-title {
@@ -57,7 +61,7 @@ body {
     width: 479px;
     height: auto;
     margin-top: 36px;
-    margin-left: 46px;
+    margin-left: 54px;
 }
 
 /*правая колонка*/
@@ -65,7 +69,9 @@ body {
     width: 750px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
+
+    flex-shrink: 0;
 }
 
 .text-block {
@@ -85,20 +91,20 @@ body {
 
 .text-top {
     width: 566px;
-    align-self: self-start;
+    margin-left: 46px;
 }
 
 .img-middle {
     width: 750px;
     height: auto;
     margin-top: 111px;
-/*    TODO: подвинуть влево*/
+    margin-left: -138px;
 }
 
 .text-bottom {
     width: 750px;
     margin-top: 49px;
-/*    TODO: подвинуть влево*/
+    margin-left: -138px;
 }
 
 /*футер*/
