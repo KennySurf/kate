@@ -4,13 +4,13 @@ body {
     color: #FFFFFF;
     margin: 0;
     font-family: 'Helvetica', Arial, sans-serif;
+
+    overflow-x: hidden;
 }
 
 /*весь main контейнер*/
 .page-content {
-    max-width: 1440px;
-    /*width: 100%;*/
-    margin: 0 auto;
+    width: 100%;
     padding-top: 147.75px;
     box-sizing: border-box;
 }
@@ -21,13 +21,13 @@ body {
     box-sizing: border-box;
 
     width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
+
 }
 
 /*левая колонка*/
 .col-left {
-    width: 739px;
+    /*739 в макете вида 1440px переводим в проценты от экрана*/
+    width: calc((739 / 1440) * 100vw);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -36,20 +36,20 @@ body {
 }
 
 .img-top {
-    width: 739px;
+    width: 100%;
     height: auto;
     display: block;
 }
 
 .vertical-title-wrapper {
     margin-top: 36px;
-    margin-left: 54px;
+    margin-left: calc((54 / 1440) * 100vw);
 }
 
 .vertical-title {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
-    font-size: 80px;
+    font-size: calc((80 / 1440) * 100vw);
     font-weight: 700;
     line-height: 100%;
     text-transform: uppercase;
@@ -58,15 +58,15 @@ body {
 }
 
 .img-bottom {
-    width: 479px;
+    width: calc((479 / 1440) * 100vw);
     height: auto;
     margin-top: 36px;
-    margin-left: 54px;
+    margin-left: calc((54 / 1440) * 100vw);
 }
 
 /*правая колонка*/
 .col-right {
-    width: 750px;
+    width: calc((750 / 1440) * 100vw);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -75,9 +75,9 @@ body {
 }
 
 .text-block {
-    font-size: 23px;
+    font-size: calc((23 / 1440) * 100vw);
     font-weight: 400;
-    line-height: 100%;
+    line-height: 120%;
     margin: 0;
 }
 
@@ -90,21 +90,21 @@ body {
 }
 
 .text-top {
-    width: 566px;
-    margin-left: 46px;
+    width: calc((566 / 1440) * 100vw);
+    margin-left: calc((46 / 1440) * 100vw);
 }
 
 .img-middle {
-    width: 750px;
+    width: calc((750 / 1440) * 100vw);
     height: auto;
     margin-top: 111px;
-    margin-left: -138px;
+    margin-left: calc((-138 / 1440) * 100vw);
 }
 
 .text-bottom {
-    width: 750px;
+    width: calc((750 / 1440) * 100vw);
     margin-top: 49px;
-    margin-left: -138px;
+    margin-left: calc((-138 / 1440) * 100vw);
 }
 
 /*футер*/
