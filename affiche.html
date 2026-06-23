@@ -6,7 +6,38 @@
 
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/affiche.css">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.product-card');
+            const modals = document.querySelectorAll('.ticket-modal-overlay');
+
+            cards.forEach(card => {
+                card.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    const targetModalId = card.getAttribute('data-modal');
+                    const targetModal = document.getElementById(targetModalId);
+
+                    if (targetModal) {
+                        targetModal.classList.add('active');
+                    }
+                })
+            })
+
+            // Закрытие модалки
+            modals.forEach(modal => {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.classList.remove('active');
+                    }
+                })
+            })
+        })
+
+    </script>
 </head>
+
 <body>
 
     <header class="header">
@@ -29,7 +60,7 @@
     <main class="page-content">
         <section class="affiche-grid">
 
-            <a href="#" class="product-card">
+            <a href="#" class="product-card" data-modal="modal-1">
                 <img src="assets/affiche_page/ticket1.svg" alt="монокриптор" class="product-image">
                 <div class="product-info">
                     <h2 class="product-date">12 июля, 19:00</h2>
@@ -37,7 +68,7 @@
                 </div>
             </a>
 
-            <a href="#" class="product-card">
+            <a href="#" class="product-card" data-modal="modal-2">
                 <img src="assets/affiche_page/ticket2.svg" alt="монокриптор" class="product-image">
                 <div class="product-info">
                     <h2 class="product-date">19 июля, 18:30</h2>
@@ -45,7 +76,7 @@
                 </div>
             </a>
 
-            <a href="#" class="product-card">
+            <a href="#" class="product-card" data-modal="modal-3">
                 <img src="assets/affiche_page/ticket3.svg" alt="монокриптор" class="product-image">
                 <div class="product-info">
                     <h2 class="product-date">26 июля, 17:00</h2>
@@ -53,7 +84,7 @@
                 </div>
             </a>
 
-            <a href="#" class="product-card">
+            <a href="#" class="product-card" data-modal="modal-4">
                 <img src="assets/affiche_page/ticket4.svg" alt="монокриптор" class="product-image">
                 <div class="product-info">
                     <h2 class="product-date">2 августа, 20:00</h2>
@@ -61,7 +92,7 @@
                 </div>
             </a>
 
-            <a href="#" class="product-card">
+            <a href="#" class="product-card" data-modal="modal-5">
                 <img src="assets/affiche_page/ticket5.svg" alt="монокриптор" class="product-image">
                 <div class="product-info">
                     <h2 class="product-date">9 августа, 16:00</h2>
@@ -69,7 +100,7 @@
                 </div>
             </a>
 
-            <a href="#" class="product-card">
+            <a href="#" class="product-card" data-modal="modal-6">
                 <img src="assets/affiche_page/ticket6.svg" alt="монокриптор" class="product-image">
                 <div class="product-info">
                     <h2 class="product-date">23 августа, 18:00</h2>
@@ -79,7 +110,6 @@
 
         </section>
 
-
     </main>
 
     <footer class="page-footer">
@@ -88,5 +118,55 @@
             <a href="mailto:EKALISAKOVA@EDU.HSE.RU">EKALISAKOVA@EDU.HSE.RU</a>
         </div>
     </footer>
+
+    <div class="ticket-modal-overlay" id="modal-1">
+        <div class="ticket-content">
+            <div class="ticket-header">
+                <img src="assets/affiche_page/tickets/ticket1.svg" alt="ticket1" class="ticket-img">
+                <button class="ticket-buy-button">купить билет</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="ticket-modal-overlay" id="modal-2">
+        <div class="ticket-content">
+            <div class="ticket-header">
+                <img src="assets/affiche_page/tickets/ticket2.svg" alt="ticket2" class="ticket-img">
+            </div>
+        </div>
+    </div>
+
+    <div class="ticket-modal-overlay" id="modal-3">
+        <div class="ticket-content">
+            <div class="ticket-header">
+                <img src="assets/affiche_page/tickets/ticket3.svg" alt="ticket3" class="ticket-img">
+            </div>
+        </div>
+    </div>
+
+    <div class="ticket-modal-overlay" id="modal-4">
+        <div class="ticket-content">
+            <div class="ticket-header">
+                <img src="assets/affiche_page/tickets/ticket4.svg" alt="ticket4" class="ticket-img">
+            </div>
+        </div>
+    </div>
+
+    <div class="ticket-modal-overlay" id="modal-5">
+        <div class="ticket-content">
+            <div class="ticket-header">
+                <img src="assets/affiche_page/tickets/ticket5.svg" alt="ticket5" class="ticket-img">
+            </div>
+        </div>
+    </div>
+
+    <div class="ticket-modal-overlay" id="modal-6">
+        <div class="ticket-content">
+            <div class="ticket-header">
+                <img src="assets/affiche_page/tickets/ticket6.svg" alt="ticket6" class="ticket-img">
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

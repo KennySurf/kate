@@ -53,9 +53,6 @@ body {
     line-height: 100%;
 }
 
-
-
-
 /*ФУТЕР*/
 .page-footer {
     margin: calc((123 / 1440) * 100vw) calc((30 / 1440) * 100vw) calc((41 / 1440) * 100vw) calc((20 / 1440) * 100vw);
@@ -79,6 +76,78 @@ body {
 .footer-bottom a:hover {
     opacity: 0.7;
 }
+
+/*Анимка на билет*/
+.ticket-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    z-index: 10000;
+
+    /*Центрируем*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*скрываем по упомолчанию*/
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/*Настройка стиля билета*/
+.ticket-content {
+    width: calc((1067 / 1440) * 100vw);
+
+    background-color: black;
+
+
+    border-radius: calc((20 / 1440) * 100vw);
+    padding: calc((30 / 1440) * 100vw);
+
+
+    /*Эффект выползания билета снизу*/
+    transform: translateY(50px);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ticket-header {
+    width: calc((900 / 1440) * 100vw);
+    height: calc((400 / 1440) * 100vw);
+    background: #e0e0e0;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.ticket-buy-button {
+    width: calc((284 / 1440) * 100vw);
+    height: calc((55 / 1440) * 100vw);
+
+    color: #e0e0e0;
+    background-color: #000000;
+    border-radius: calc((9 / 1440) * 100vw);
+}
+
+.ticket-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.ticket-modal-overlay.active .ticket-content {
+    transform: translateY(0);
+}
+
+
 
 @media (max-width: 768px) {
     .merch-grid {
